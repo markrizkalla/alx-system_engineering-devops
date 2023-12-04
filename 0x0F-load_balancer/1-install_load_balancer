@@ -13,8 +13,8 @@ backend backend-servers
         balance roundrobin
         mode http
         option forwardfor
-        server 292997-web-01 35.175.64.48 check
-        server 292997-web-02 52.205.215.101 check
+        server 292997-web-01 35.175.64.48:80 check
+        server 292997-web-02 52.205.215.101:80 check
 " >> /etc/haproxy/haproxy.cfg
 
 service haproxy start
