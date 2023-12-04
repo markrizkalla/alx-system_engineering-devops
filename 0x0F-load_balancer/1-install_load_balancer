@@ -16,7 +16,7 @@ frontend load_balancer
         option httpclose
         option forwardfor
         server 292997-web-01 35.175.64.48 check
-        server 292997-web-02 52.205.215.1010 check
+        server 292997-web-02 52.205.215.101 check
 
 backend backend-servers
         server 292997-web-01 35.175.64.48 check
