@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""  Python script that, using this REST API, for a given employee ID,
-    returns information about his/her TODO list progress."""
+"""Python script using this REST API, for a given
+employee ID,returns information about his TODO list progress."""
 import requests
 import sys
 
