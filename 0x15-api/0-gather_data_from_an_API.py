@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Python script using this REST API, for a given
-employee ID,returns information about TODO list progress."""
+"""Python script using REST API"""
 import requests
 import sys
 
@@ -15,9 +14,7 @@ if __name__ == "__main__":
     total_todos = 0
     for todo in todos:
         if todo.get('userId') == id:
-
             total_todos += 1
-
             if todo.get('completed'):
                 completed_todos.append(todo.get('title'))
 
