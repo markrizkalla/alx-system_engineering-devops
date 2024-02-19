@@ -15,8 +15,7 @@ if __name__ == "__main__":
     tasks = requests.get(url + '/todos').json()
 
     with open(str(id) + ".csv", 'w', newline="") as f:
-        spamwriter = csv.writer(f, quotechar='"',
-                                quoting=csv.QUOTE_ALL)
+        spamwriter = csv.writer(f, quoting=csv.QUOTE_ALL)
         for task in tasks:
             if task.get('userId') == id:
                 spamwriter.writerow([str(id), user_name,
