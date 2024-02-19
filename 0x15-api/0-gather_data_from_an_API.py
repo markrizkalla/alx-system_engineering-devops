@@ -1,15 +1,16 @@
 #!/usr/bin/python3
 """Python script using this REST API, for a given
-employee ID,returns information about his TODO list progress."""
+employee ID,returns information about TODO list progress."""
 import requests
 import sys
 
 if __name__ == "__main__":
     id = int(sys.argv[1])
-    users = requests.get('https://jsonplaceholder.typicode.com/users').json()
+    url = 'https://jsonplaceholder.typicode.com'
+    users = requests.get(url + '/users').json()
     user_name = users[id - 1].get('name')
 
-    todos = requests.get('https://jsonplaceholder.typicode.com/todos').json()
+    todos = requests.get(url + '/todos').json()
     completed_todos = []
     total_todos = 0
     for todo in todos:
