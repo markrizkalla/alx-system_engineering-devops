@@ -22,4 +22,4 @@ if __name__ == "__main__":
           f"tasks({len(completed_todos)}/{total_todos}):")
 
     for todo in completed_todos:
-        print('     ' + todo)
+        print('\t ' + todo)
